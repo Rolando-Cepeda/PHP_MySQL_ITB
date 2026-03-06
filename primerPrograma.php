@@ -1,0 +1,5 @@
+<?php
+
+echo "BIENVENIDOS AL CURSO DE PHP Y MYSQL"
+
+?>

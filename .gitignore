@@ -1,0 +1,91 @@
+#.gitignore recomendado para PHP + MySQL + XAMPP + VSCode
+# ============================
+# ARCHIVOS DEL SISTEMA
+# ============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================
+# VISUAL STUDIO CODE
+# ============================
+.vscode/
+*.code-workspace
+
+# ============================
+# PHP / SERVIDOR
+# ============================
+# Archivos de logs
+*.log
+
+# Cachés de PHP
+*.cache
+*.tmp
+
+# Sesiones (si las guardas en archivos)
+sess_*
+
+# ============================
+# XAMPP / ENTORNO LOCAL
+# ============================
+# Configuración local de XAMPP
+xampp-control.ini
+xampp-control.log
+php_error_log
+
+# ============================
+# ARCHIVOS DE CONFIGURACIÓN
+# ============================
+# Configuración sensible
+.env
+.env.local
+.env.*.local
+
+# Archivos con credenciales
+config.php
+config.local.php
+database.php
+db.php
+
+# ============================
+# COMPOSER (si lo usas)
+# ============================
+vendor/
+composer.lock
+
+# ============================
+# NODE (si usas herramientas front-end)
+# ============================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ============================
+# ARCHIVOS DE BACKUP
+# ============================
+*.bak
+*.old
+*.orig
+*.save
+
+# ============================
+# ARCHIVOS DE BASE DE DATOS
+# ============================
+*.sql
+*.sql.gz
+*.sqlite
+*.db
+
+# ============================
+# ARCHIVOS SUBIDOS POR USUARIOS
+# ============================
+uploads/
+files/
+temp/
+cache/
+
+# ============================
+# SISTEMAS DE PLANTILLAS
+# ============================
+templates_c/
+cache/
