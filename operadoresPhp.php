@@ -75,7 +75,7 @@ var_dump($a === $b);// === Son iguales en valor y tipo de dato.
 /* 
   ---- OPERADORES LÓGICOS ------------
 &&      AND     Y lógico  (Verdadero solo si las comparaciones son verdaderas.)
-||      or      O lógico. (Falso solo si las comparaciones son falsas)
+||      OR      O lógico. (Falso solo si las comparaciones son falsas)
 !       NOT     Negación  (Invierte el valor booleano)
 */
 echo "<br>";
