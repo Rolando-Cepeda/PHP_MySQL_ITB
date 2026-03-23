@@ -33,7 +33,7 @@ if ($n1 == $n2) {
     echo "Ambos números son iguales.";
 }
 else if ($n1 > $n2) {
-    echo $n1 . ' Es mayor';
+    echo $n1 . ' Es mayor'; 
 }
 else {
     echo $n2 . ' Es mayor';
@@ -94,4 +94,25 @@ switch($dia) {
         4. Dividir
         Elija una opción: 3
 */
+
+/* 
+match es una estructura introducida en PHP 8 que funciona
+similar a switch pero:
+    - Más seguro.
+    - No necesita break.
+    - Devuelve un valor.
+    - Comparación estricta ===
+*/
+
+echo "<br>";
+echo "<br>";
+
+$opcion = "A";
+$resultado = match($opcion) {
+    'A' => "Registrar datos",
+    'B' => "Modificar datos",
+    'C' => "Eliminar datos",
+    default => "Opción inválida"
+};
+echo $resultado;
 ?>
