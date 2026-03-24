@@ -20,8 +20,7 @@ En PHP8 existen varias estructuras condicionales:
 $edad = 45;
 if ($edad >= 18) {
     echo "Eres mayor de edad.";
-}
-else {
+} else {
     echo "Eres menor de edad";
 }
 echo "<br>";
@@ -31,11 +30,9 @@ $n2 = 15;
 
 if ($n1 == $n2) {
     echo "Ambos números son iguales.";
-}
-else if ($n1 > $n2) {
-    echo $n1 . ' Es mayor'; 
-}
-else {
+} else if ($n1 > $n2) {
+    echo $n1 . ' Es mayor';
+} else {
     echo $n2 . ' Es mayor';
 }
 
@@ -43,46 +40,43 @@ echo "<br>";
 // Indicar si 3 números son iguales o cuál es el mayor.
 $num1 = 27;
 $num2 = 115;
-$num3= 18;
+$num3 = 18;
 if ($num1 == $num2 && $num2 == $num3) {
     echo "Los tres números son iguales";
-}
-else if ($num1 > $num2 && $num1 > $num3) {
+} else if ($num1 > $num2 && $num1 > $num3) {
     echo $num1 . " es mayor";
-}
-else if ($num2 > $num3) {
-     echo $num2 . " es mayor";
-}
-else {
-     echo $num3 . " es mayor";
+} else if ($num2 > $num3) {
+    echo $num2 . " es mayor";
+} else {
+    echo $num3 . " es mayor";
 }
 
 echo "<br>";
 // switch() -> Evalúa una variable contra múltiples opciones.
 // 1 = Lunes    2 = Martes ... 7 = domingo 
 $dia = 12;
-switch($dia) {
+switch ($dia) {
     case 1:
         echo "Lunes";
         break;
     case 2:
         echo "Martes";
-         break;
+        break;
     case 3:
         echo "Miércoles";
-         break;
+        break;
     case 4:
         echo "Jueves";
-         break;
+        break;
     case 5;
         echo "Viernes";
-         break;
+        break;
     case 6:
         echo "Sábado";
-         break;
+        break;
     case 7:
         echo "Domingo";
-         break;
+        break;
     default:
         echo "No existe el día";
 }
@@ -108,11 +102,54 @@ echo "<br>";
 echo "<br>";
 
 $opcion = "A";
-$resultado = match($opcion) {
+$resultado = match ($opcion) {
     'A' => "Registrar datos",
     'B' => "Modificar datos",
     'C' => "Eliminar datos",
     default => "Opción inválida"
 };
 echo $resultado;
+
+echo "<br>";
+echo "<br>";
+
+// Operador Ternario -> Forma abreviada de escribir un if-else
+// Verificar si un número es entero o negativo.
+$num = -5;
+$res = ($num > 0) ? "Positivo" : "Negativo";
+echo $res;
+echo "<br>";
+echo "<br>";
+
+/* Operador de fusion nula.
+El operador ?? verifica si una variable EXISTE o es NULL.
+Muy usado con FORMULARIOS o datos de usuario. */
+// SINTAXIS
+// $variable = vlalor1 ?? valor2;
+
+
+/* A traves del método $_GEt esta enviando los datos del formulario
+a este archivo mediante su atributo name */
+$nombre = $_GET['nombre'] ?? "Invitad@";
+echo $nombre;
 ?>
+
+<!-- Formulario -->
+<!DOCTYPE html>
+<html lang="es"> <!-- RAIZ -->
+
+<head> <!-- CABECERA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de datos</title>
+</head>
+
+<body>
+    <h1>Registro de datos</h1>
+    <form action="condicionales.php" method="GET">
+        <input type="text" name="nombre">
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+
+</html>
